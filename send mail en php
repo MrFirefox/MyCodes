@@ -1,0 +1,18 @@
+<?php
+
+$to = "xxxxx@email.com"; //هو المتغير الذي يحمل بريد الشخص المرسل اليه $to
+$subject = "xxxxxxxxx"; //هو المتغير الذي يحمل عنوان الرسالة $subject
+$message = "xxxxxxxxx"; //هو المتغير الذي يحمل الرسالة نفسها $message
+$headers = "From : abdo_2009  < abdo_2009@yahoo.com >";//هو المتغير الذي يحمل الترويسة ( سنشرحها لاحقا ) $headers 
+$headers .= "MIME-Version : 1.0 n"."Content-type: text/html ; charset=windows-1256 n";//لو أردنا ارسال رسالة مثلا بصيغة html فيجب تحديد ذلك في الترويسة مع تحديد الترميز
+
+/*
+From اي بريد واسم المرسل 
+Cc نسخة اضافية من الرسالة لأشخاص آخرين
+Bcc نسخة اضافية مخفية من الرسالة لاشخاص آخرين
+*/
+
+//الان سنقوم بعملية الإرسال 
+mail($to,$subject,$message,$headers); 
+
+?>
